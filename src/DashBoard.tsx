@@ -14,10 +14,11 @@ export function MentorProp({mentor, detailed=false} : Props) {
         <>
             <h2 className='text-xl font-bold'>{mentor.name}</h2>
             <p>Especialidad: {mentor.specialty}</p>
+            <p>Modalidad: {mentor.modality}</p>
             <p className={mentor.availableSlots > 0 ? 'text-green-700':'text-red-600'}>
                 Cupos disponibles : {mentor.availableSlots}
             </p>
 
         </>
-    )
+    );
 }
