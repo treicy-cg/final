@@ -1,13 +1,21 @@
-import {useState} from 'react';
-import type {}
-import {Link, Navigate} from 'react-router-dom';
+import { useState, type FormEvent } from 'react';
+import { registerUser, loginUser, apiError } from './api';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  Link,
+  Outlet,
+  useNavigate,
+} from 'react-router-dom';
 
 const formClass = 'mx-auto ant-16 flex max -w-sm flex-col gap-3 rounded order bg-white p-6';
 const inputClass = 'rounded border p-2';
 const buttonClass = 'rounded bg-slate-700 p-2 text-white';
 
 export function RegisterPage() {
-    const navigate = Navigate();
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');

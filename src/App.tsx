@@ -1,5 +1,16 @@
-import 'LoginPage';
-import 'RegisterPage';
+import { LoginPage, RegisterPage } from './Auth';
+import DashboardPage from './pages/DashboardPage';
+import MentorDetailPage from './pages/MentorDetailPage';
+import MyRequestsPage from './pages/MyRequestsPage';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  Link,
+  Outlet,
+  useNavigate,
+} from 'react-router-dom';
 
 function ProtectedLayout() {
   const navigate = useNavigate();
